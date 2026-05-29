@@ -170,4 +170,4 @@ with tab4:
 
 # --- FOOTER ---
 st.markdown("---")
-st.markdown("<div style='text-align: center; color: #888;'>Built with Streamlit • Let's build secure, intelligent systems together.</div>", unsafe_allow_html=True)
+
