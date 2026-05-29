@@ -43,21 +43,21 @@ st.markdown("""
     }
 
     /* 5. CODE BLOCKS (SKILLS): Dark background, White text, Prominent White border */
-    [data-testid="stCodeBlock"], [data-testid="stCodeBlock"] pre {
-        background-color: #2a2a2a !important; /* Dark grey background */
-        border: 1.5px solid #FFFFFF !important; /* Prominent white border */
+    div[data-testid="stCodeBlock"] {
+        background-color: #1e1e1e !important;
+        border: 2px solid #ffffff !important;
         border-radius: 8px !important;
     }
-    
-    /* Force every single piece of text inside the code block to be white */
-    [data-testid="stCodeBlock"] code, 
-    [data-testid="stCodeBlock"] span, 
-    [data-testid="stCodeBlock"] * {
-        color: #FFFFFF !important; /* Bright white text */
+    div[data-testid="stCodeBlock"] pre,
+    div[data-testid="stCodeBlock"] code {
         background-color: transparent !important;
-        text-shadow: none !important;
+        color: #ffffff !important;
         font-weight: 600 !important;
         font-size: 1rem !important;
+        text-shadow: none !important;
+    }
+    div[data-testid="stCodeBlock"] span {
+        color: #ffffff !important;
     }
 
     /* 6. Style the Project Cards (Expanders) to match the dark theme */
