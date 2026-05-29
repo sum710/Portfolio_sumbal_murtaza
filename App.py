@@ -42,18 +42,27 @@ st.markdown("""
         color: #FFFFFF !important; /* Text turns white */
     }
 
-    /* 5. CUSTOM SKILL BOXES: Guaranteed Dark bg, White text, White border */
+    /* 5. CUSTOM SKILL BOXES WITH GLOW EFFECT */
     .skill-box {
         background-color: #1e1e1e;
         border: 2px solid #ffffff;
         border-radius: 8px;
         padding: 15px;
         color: #ffffff;
-        font-family: monospace;
-        font-size: 1rem;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 1.05rem;
         font-weight: 600;
         margin-bottom: 20px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease-in-out; /* Smooth transition for the hover effect */
+        cursor: default;
+    }
+    
+    /* The Glowing Hover Effect */
+    .skill-box:hover {
+        border-color: #4DA8DA; /* Border turns to accent blue */
+        box-shadow: 0 0 15px rgba(77, 168, 218, 0.5), 0 0 30px rgba(77, 168, 218, 0.3); /* Neon blue glow */
+        transform: translateY(-4px); /* Slightly lifts the card up */
     }
 
     /* 6. Style the Project Cards (Expanders) to match the dark theme */
@@ -68,24 +77,26 @@ st.markdown("""
         font-size: 1.1rem;
     }
 
-    /* 7. Custom gradient text for your name */
+    /* 7. PERFECTED MAIN HEADING TYPOGRAPHY */
     .main-header {
-        font-size: 3.2rem;
-        font-weight: 800;
-        background: -webkit-linear-gradient(45deg, #4DA8DA, #E0E0E0);
+        font-size: 4.5rem; /* Much larger and more prominent */
+        font-weight: 900; /* Maximum boldness */
+        letter-spacing: -1.5px; /* Tight, professional letter spacing */
+        line-height: 1.1; /* Keeps the text compact */
+        background: -webkit-linear-gradient(45deg, #4DA8DA, #FFFFFF);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        margin-bottom: 0px;
+        margin-bottom: 5px;
         padding-bottom: 0px;
     }
     
     /* 8. Sleek subtitle */
     .sub-header {
-        font-size: 1.4rem;
+        font-size: 1.6rem; /* Slightly larger to match the new heading */
         font-weight: 500;
         color: #A0AEC0 !important;
-        margin-top: 5px;
-        margin-bottom: 25px;
+        margin-top: 0px;
+        margin-bottom: 30px;
     }
     
     /* 9. Info box for the summary */
@@ -115,6 +126,7 @@ st.markdown("""
     /* 11. Style the top navigation tabs */
     .stTabs [data-baseweb="tab"] {
         color: #A0AEC0 !important;
+        font-size: 1.1rem;
     }
     .stTabs [aria-selected="true"] {
         color: #4DA8DA !important;
