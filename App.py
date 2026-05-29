@@ -36,18 +36,20 @@ with col1:
     """)
 
 with col2:
-    # A professional tech placeholder image for your profile (you can replace this URL with a link to your own photo later)
     st.image("https://images.unsplash.com/photo-1573164713988-8665fc963095?w=400&q=80", use_column_width=True)
 
 # --- SIDEBAR ---
-st.sidebar.image("https://cdn-icons-png.flaticon.com/512/2942/2942813.png", width=100) # Simple avatar icon
+st.sidebar.image("https://cdn-icons-png.flaticon.com/512/2942/2942813.png", width=100) 
 st.sidebar.header("Contact Information")
 st.sidebar.markdown("""
 - 📍 **Location:** Islamabad, Pakistan
 - 📱 **Phone:** +92 318 4669484
 - ✉️ **Email:** sumbalmurtazal@gmail.com
-- 🔗 **LinkedIn:** [sumbal-murtaza](#)
 """)
+
+# Clean LinkedIn Link Integration
+st.sidebar.markdown("- 🔗 **LinkedIn:** [Connect on LinkedIn](https://www.linkedin.com/in/sumbal-murtaza-42907724a/)")
+st.sidebar.link_button("🌐 Visit My LinkedIn Profile", "https://www.linkedin.com/in/sumbal-murtaza-42907724a/")
 
 st.sidebar.divider()
 st.sidebar.header("Core Competencies")
@@ -62,6 +64,10 @@ tab1, tab2, tab3, tab4 = st.tabs(["🚀 Experience", "💻 Technical Projects", 
 with tab1:
     st.header("Professional Experience & Research")
     
+    # CTA Quote for research connecting to your professional profile
+    st.markdown("> *\"Let's connect to discuss privacy-preserving AI and secure software solutions.\"* — [Connect on LinkedIn](https://www.linkedin.com/in/sumbal-murtaza-42907724a/)")
+    st.write("")
+
     with st.container():
         st.subheader("AI Pioneers Program Intern")
         st.markdown("**Remote | Oct 2025 - Apr 2026** — *Project Mentored by Yale University Researcher*")
@@ -88,7 +94,6 @@ with tab2:
     # Project 1
     col1, col2 = st.columns([1, 2])
     with col1:
-        # Image representing FinTech / Secure Cloud
         st.image("https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&q=80", use_column_width=True)
     with col2:
         st.subheader("Civitas: Secure FinTech Engagement Platform")
@@ -105,7 +110,6 @@ with tab2:
     # Project 2
     col1, col2 = st.columns([1, 2])
     with col1:
-        # Image representing Cybersecurity / Hacking
         st.image("https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&q=80", use_column_width=True)
     with col2:
         st.subheader("Cybersecurity & Network Defense")
@@ -122,7 +126,6 @@ with tab2:
     # Project 3
     col1, col2 = st.columns([1, 2])
     with col1:
-        # Image representing Financial Dashboards / Analytics
         st.image("https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80", use_column_width=True)
     with col2:
         st.subheader("Financial Data Science")
