@@ -3,10 +3,37 @@ import streamlit as st
 # --- PAGE CONFIGURATION ---
 st.set_page_config(page_title="Sumbal Murtaza | Portfolio", page_icon="🛡️", layout="wide")
 
-# --- CUSTOM CSS FOR DARK THEME ---
+# --- GLOBAL DARK THEME CSS ---
 st.markdown("""
 <style>
-    /* Gradient text for the main name - adjusted to pop on dark backgrounds */
+    /* 1. Force the main app background to Dark Grey */
+    .stApp {
+        background-color: #1e1e1e;
+    }
+    
+    /* 2. Force the sidebar to a slightly darker Grey */
+    [data-testid="stSidebar"] {
+        background-color: #171717;
+    }
+
+    /* 3. Make all default text White/Off-White */
+    .stApp p, .stApp h1, .stApp h2, .stApp h3, .stApp h4, .stApp h5, .stApp h6, .stApp li, .stApp span {
+        color: #f0f0f0 !important;
+    }
+
+    /* 4. Style the Project Cards (Expanders) to match the dark theme */
+    [data-testid="stExpander"] {
+        background-color: #2a2a2a;
+        border: 1px solid #3d3d3d;
+        border-radius: 8px;
+    }
+    [data-testid="stExpander"] details summary p {
+        color: #4DA8DA !important;
+        font-weight: 600;
+        font-size: 1.1rem;
+    }
+
+    /* 5. Custom gradient text for your name */
     .main-header {
         font-size: 3.2rem;
         font-weight: 800;
@@ -17,37 +44,46 @@ st.markdown("""
         padding-bottom: 0px;
     }
     
-    /* Sleek subtitle - lighter grey for dark mode visibility */
+    /* 6. Sleek subtitle */
     .sub-header {
         font-size: 1.4rem;
         font-weight: 500;
-        color: #A0AEC0;
+        color: #A0AEC0 !important;
         margin-top: 5px;
         margin-bottom: 25px;
     }
     
-    /* Custom info box for the summary - dark grey base with white text */
+    /* 7. Info box for the summary */
     .info-box {
-        background-color: #2D2D2D;
+        background-color: #2a2a2a;
         padding: 25px;
         border-radius: 8px;
         border-left: 5px solid #4DA8DA;
-        color: #FFFFFF;
+        color: #f0f0f0;
         font-size: 1.1rem;
         line-height: 1.7;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
         margin-bottom: 30px;
     }
     
-    /* Style for markdown links to match the dark theme */
+    /* 8. Style for markdown links */
     a {
-        color: #4DA8DA;
+        color: #4DA8DA !important;
         text-decoration: none;
         font-weight: 600;
     }
     a:hover {
-        color: #FFFFFF;
+        color: #FFFFFF !important;
         text-decoration: underline;
+    }
+
+    /* 9. Style the top navigation tabs */
+    .stTabs [data-baseweb="tab"] {
+        color: #A0AEC0 !important;
+    }
+    .stTabs [aria-selected="true"] {
+        color: #4DA8DA !important;
+        border-bottom-color: #4DA8DA !important;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -122,7 +158,7 @@ with tab2:
     with col2:
         st.markdown("### [Civitas: Secure FinTech Engagement Platform](https://civitas-backend.vercel.app/)")
         st.caption("Final Year Project (FYP) | Current")
-        with st.expander("View Project Details", expanded=True):
+        with st.expander("Click to view Project Details", expanded=True):
             st.markdown("""
             * Developed a secure digital engagement platform ([View Live Backend](https://civitas-backend.vercel.app/)) using **React.js, Node.js, and Supabase** for cloud-based data management.
             * Integrated Row Level Security (RLS) and secure authentication protocols to protect user financial transactions.
@@ -138,7 +174,7 @@ with tab2:
     with col2:
         st.subheader("Cybersecurity & Network Defense")
         st.caption("Vulnerability Assessment | 2025")
-        with st.expander("View Project Details"):
+        with st.expander("Click to view Project Details"):
             st.markdown("""
             * Performed network audits via **Kali Linux**, specializing in Packet Sniffing and DDoS Attack Simulation.
             * Utilized **Metasploit** for exploit research and configured secure Ubuntu environments to mitigate server-side risks.
@@ -154,7 +190,7 @@ with tab2:
     with col2:
         st.subheader("Financial Data Science")
         st.caption("Risk Modeling & Analytics | 2025")
-        with st.expander("View Project Details"):
+        with st.expander("Click to view Project Details"):
             st.markdown("""
             * **Credit Risk Optimization:** Built a Logistic Regression model to assess default probabilities.
             * **Forecasting Dashboard:** Developed an interactive Streamlit app for stock price forecasting using Scikit-learn and Pandas.
@@ -194,4 +230,3 @@ with tab4:
 
 # --- FOOTER ---
 st.markdown("---")
-st.markdown("<div style='text-align: center; color: #888;'>Built with Streamlit • Let's build secure, intelligent systems together.</div>", unsafe_allow_html=True)
