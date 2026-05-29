@@ -42,18 +42,18 @@ st.markdown("""
         color: #FFFFFF !important; /* Text turns white */
     }
 
-    /* 5. THE ULTIMATE FIX FOR CODE BLOCKS (SKILLS): White background, strictly black text */
+    /* 5. CODE BLOCKS (SKILLS): Dark background, White text, Prominent White border */
     [data-testid="stCodeBlock"], [data-testid="stCodeBlock"] pre {
-        background-color: #FFFFFF !important;
-        border: 1px solid #CCCCCC !important;
+        background-color: #2a2a2a !important; /* Dark grey background */
+        border: 1.5px solid #FFFFFF !important; /* Prominent white border */
         border-radius: 8px !important;
     }
     
-    /* Force every single piece of text inside the code block to be black */
+    /* Force every single piece of text inside the code block to be white */
     [data-testid="stCodeBlock"] code, 
     [data-testid="stCodeBlock"] span, 
     [data-testid="stCodeBlock"] * {
-        color: #000000 !important;
+        color: #FFFFFF !important; /* Bright white text */
         background-color: transparent !important;
         text-shadow: none !important;
         font-weight: 600 !important;
@@ -269,3 +269,4 @@ with tab4:
 
 # --- FOOTER ---
 st.markdown("---")
+st.markdown("<div style='text-align: center; color: #A0AEC0;'>Built with Streamlit • Let's build secure, intelligent systems together.</div>", unsafe_allow_html=True)
