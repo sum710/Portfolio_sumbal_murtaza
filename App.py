@@ -21,6 +21,22 @@ st.markdown("""
         color: #f0f0f0 !important;
     }
 
+    /* Make the main title completely bold and prominent */
+    h1 {
+        font-weight: 800 !important;
+        font-size: 3.5rem !important;
+        padding-bottom: 0px !important;
+        margin-bottom: -15px !important;
+        color: #FFFFFF !important;
+    }
+    
+    /* Make the subtitle slightly softer */
+    h3 {
+        font-weight: 500 !important;
+        color: #A0AEC0 !important;
+        margin-bottom: 20px !important;
+    }
+
     /* 4. FIX FOR BUTTONS & HOVER EFFECT */
     [data-testid="stLinkButton"] a {
         background-color: #FFFFFF !important;
@@ -77,31 +93,7 @@ st.markdown("""
         font-size: 1.1rem;
     }
 
-    /* 7. CLEAN STREAMLIT HEADER TYPOGRAPHY */
-    .main-header {
-        font-family: "Source Sans Pro", sans-serif; /* Matches standard Streamlit font */
-        font-size: 3.5rem; 
-        font-weight: 700; /* Standard bold to match native headers */
-        letter-spacing: normal; /* Removed the tight letter spacing */
-        line-height: 1.2;
-        background: -webkit-linear-gradient(45deg, #4DA8DA, #FFFFFF);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        margin-bottom: 10px;
-        padding-bottom: 0px;
-    }
-    
-    /* 8. Sleek subtitle matching the Streamlit font */
-    .sub-header {
-        font-family: "Source Sans Pro", sans-serif; /* Matches standard Streamlit font */
-        font-size: 1.5rem;
-        font-weight: 600;
-        color: #A0AEC0 !important;
-        margin-top: 0px;
-        margin-bottom: 30px;
-    }
-    
-    /* 9. Info box for the summary */
+    /* 7. Info box for the summary */
     .info-box {
         background-color: #2a2a2a;
         padding: 25px;
@@ -114,7 +106,7 @@ st.markdown("""
         margin-bottom: 30px;
     }
     
-    /* 10. Style for markdown links */
+    /* 8. Style for markdown links */
     a {
         color: #4DA8DA !important;
         text-decoration: none;
@@ -125,7 +117,7 @@ st.markdown("""
         text-decoration: underline;
     }
 
-    /* 11. Style the top navigation tabs */
+    /* 9. Style the top navigation tabs */
     .stTabs [data-baseweb="tab"] {
         color: #A0AEC0 !important;
         font-size: 1.1rem;
@@ -137,9 +129,11 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-# --- HERO SECTION (NO IMAGES, FULL WIDTH) ---
-st.markdown('<p class="main-header">Sumbal Murtaza</p>', unsafe_allow_html=True)
-st.markdown('<p class="sub-header">FinTech Senior & AI Pioneers Program Intern</p>', unsafe_allow_html=True)
+# --- HERO SECTION (NATIVE STREAMLIT TYPOGRAPHY) ---
+st.title("Sumbal Murtaza")
+st.subheader("FinTech Senior & AI Pioneers Program Intern")
+st.write("") # Adds a tiny bit of spacing
+
 st.markdown("""
 <div class="info-box">
     <b>Specialized in Privacy-Preserving Machine Learning (PPML), Cybersecurity, and Full-Stack Development.</b><br><br>
