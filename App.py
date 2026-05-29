@@ -21,13 +21,28 @@ st.markdown("""
         color: #f0f0f0 !important;
     }
 
-    /* 4. FIX FOR BUTTONS: Ensure text inside buttons is dark so it's readable on light backgrounds */
+    /* 4. FIX FOR BUTTONS & HOVER EFFECT */
+    [data-testid="stLinkButton"] a {
+        background-color: #FFFFFF !important;
+        border: 1px solid #CCCCCC !important;
+        border-radius: 6px !important;
+        transition: all 0.3s ease !important;
+    }
     [data-testid="stLinkButton"] p {
-        color: #1e1e1e !important;
+        color: #000000 !important;
         font-weight: 600;
     }
+    
+    /* What happens when you hover over the buttons */
+    [data-testid="stLinkButton"] a:hover {
+        background-color: #4DA8DA !important; /* Turns bright blue */
+        border-color: #4DA8DA !important;
+    }
+    [data-testid="stLinkButton"] a:hover p {
+        color: #FFFFFF !important; /* Text turns white */
+    }
 
-    /* 5. THE ULTIMATE FIX FOR CODE BLOCKS: White background, strictly black text */
+    /* 5. THE ULTIMATE FIX FOR CODE BLOCKS (SKILLS): White background, strictly black text */
     [data-testid="stCodeBlock"], [data-testid="stCodeBlock"] pre {
         background-color: #FFFFFF !important;
         border: 1px solid #CCCCCC !important;
