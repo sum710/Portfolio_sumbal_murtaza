@@ -120,11 +120,11 @@ with tab2:
     with col1:
         st.image("https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&q=80", use_column_width=True)
     with col2:
-        st.subheader("Civitas: Secure FinTech Engagement Platform")
+        st.markdown("### [Civitas: Secure FinTech Engagement Platform](https://civitas-backend.vercel.app/)")
         st.caption("Final Year Project (FYP) | Current")
         with st.expander("View Project Details", expanded=True):
             st.markdown("""
-            * Developed a secure digital engagement platform using **React.js, Node.js, and Supabase** for cloud-based data management.
+            * Developed a secure digital engagement platform ([View Live Backend](https://civitas-backend.vercel.app/)) using **React.js, Node.js, and Supabase** for cloud-based data management.
             * Integrated Row Level Security (RLS) and secure authentication protocols to protect user financial transactions.
             * Showcased at the International Student Convention & Expo and reviewed by HEC during official institutional visits.
             """)
