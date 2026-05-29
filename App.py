@@ -3,50 +3,50 @@ import streamlit as st
 # --- PAGE CONFIGURATION ---
 st.set_page_config(page_title="Sumbal Murtaza | Portfolio", page_icon="🛡️", layout="wide")
 
-# --- CUSTOM CSS FOR A PREMIUM PROFESSIONAL THEME ---
+# --- CUSTOM CSS FOR DARK THEME ---
 st.markdown("""
 <style>
-    /* Gradient text for the main name */
+    /* Gradient text for the main name - adjusted to pop on dark backgrounds */
     .main-header {
         font-size: 3.2rem;
         font-weight: 800;
-        background: -webkit-linear-gradient(45deg, #2b5876, #4e4376);
+        background: -webkit-linear-gradient(45deg, #4DA8DA, #E0E0E0);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         margin-bottom: 0px;
         padding-bottom: 0px;
     }
     
-    /* Sleek subtitle */
+    /* Sleek subtitle - lighter grey for dark mode visibility */
     .sub-header {
         font-size: 1.4rem;
         font-weight: 500;
-        color: #555555;
+        color: #A0AEC0;
         margin-top: 5px;
         margin-bottom: 25px;
     }
     
-    /* Custom info box for the summary */
+    /* Custom info box for the summary - dark grey base with white text */
     .info-box {
-        background-color: #f8f9fa;
+        background-color: #2D2D2D;
         padding: 25px;
         border-radius: 8px;
-        border-left: 5px solid #2b5876;
-        color: #333333;
+        border-left: 5px solid #4DA8DA;
+        color: #FFFFFF;
         font-size: 1.1rem;
         line-height: 1.7;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
         margin-bottom: 30px;
     }
     
-    /* Style for markdown links to match the theme */
+    /* Style for markdown links to match the dark theme */
     a {
-        color: #2b5876;
+        color: #4DA8DA;
         text-decoration: none;
         font-weight: 600;
     }
     a:hover {
-        color: #4e4376;
+        color: #FFFFFF;
         text-decoration: underline;
     }
 </style>
@@ -124,7 +124,7 @@ with tab2:
         st.caption("Final Year Project (FYP) | Current")
         with st.expander("View Project Details", expanded=True):
             st.markdown("""
-            * Developed a secure digital engagement platform ([View Live Project](https://civitas-backend.vercel.app/)) using **React.js, Node.js, and Supabase** for cloud-based data management.
+            * Developed a secure digital engagement platform ([View Live Backend](https://civitas-backend.vercel.app/)) using **React.js, Node.js, and Supabase** for cloud-based data management.
             * Integrated Row Level Security (RLS) and secure authentication protocols to protect user financial transactions.
             * Showcased at the International Student Convention & Expo and reviewed by HEC during official institutional visits.
             """)
@@ -194,3 +194,4 @@ with tab4:
 
 # --- FOOTER ---
 st.markdown("---")
+st.markdown("<div style='text-align: center; color: #888;'>Built with Streamlit • Let's build secure, intelligent systems together.</div>", unsafe_allow_html=True)
