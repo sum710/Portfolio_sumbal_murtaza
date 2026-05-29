@@ -27,20 +27,22 @@ st.markdown("""
         font-weight: 600;
     }
 
-    /* 5. FIX FOR CODE BLOCKS (SKILLS): White background with black text */
-    pre, [data-testid="stCodeBlock"] {
+    /* 5. THE ULTIMATE FIX FOR CODE BLOCKS: White background, strictly black text */
+    [data-testid="stCodeBlock"], [data-testid="stCodeBlock"] pre {
         background-color: #FFFFFF !important;
         border: 1px solid #CCCCCC !important;
         border-radius: 8px !important;
     }
-    code, [data-testid="stCodeBlock"] code {
+    
+    /* Force every single piece of text inside the code block to be black */
+    [data-testid="stCodeBlock"] code, 
+    [data-testid="stCodeBlock"] span, 
+    [data-testid="stCodeBlock"] * {
         color: #000000 !important;
         background-color: transparent !important;
-        font-weight: 600;
-        font-size: 1rem;
-    }
-    [data-testid="stCodeBlock"] span {
-        color: #000000 !important;
+        text-shadow: none !important;
+        font-weight: 600 !important;
+        font-size: 1rem !important;
     }
 
     /* 6. Style the Project Cards (Expanders) to match the dark theme */
