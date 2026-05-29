@@ -38,6 +38,17 @@ st.markdown("""
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
         margin-bottom: 30px;
     }
+    
+    /* Style for markdown links to match the theme */
+    a {
+        color: #2b5876;
+        text-decoration: none;
+        font-weight: 600;
+    }
+    a:hover {
+        color: #4e4376;
+        text-decoration: underline;
+    }
 </style>
 """, unsafe_allow_html=True)
 
@@ -85,7 +96,7 @@ with tab1:
         st.subheader("AI Pioneers Program Intern")
         st.markdown("**Remote | Oct 2025 - Apr 2026** — *Project Mentored by Yale University Researcher*")
         st.markdown("""
-        * **Official Contributor (Sequre):** Successfully integrated privacy-preserving Deep Learning modules into the official Sequre repository managed by Smjhlovic Haris.
+        * **Official Contributor ([Sequre](https://github.com/sum710/sequre)):** Successfully integrated privacy-preserving Deep Learning modules into the official Sequre repository managed by Smjhlovic Haris.
         * **Privacy-Preserving Sepsis Prediction:** Developed a Deep Learning model for early sepsis detection utilizing the Sequre library on the Codon framework.
         * **Secure Multi-Party Computation (SMPC):** Implemented protocols to process sensitive medical datasets while maintaining patient confidentiality.
         * **Optimization:** Optimized SimpleRNN architecture for time-series medical data, focusing on high-speed execution through Codon's ahead-of-time (AOT) compilation.
