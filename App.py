@@ -27,17 +27,20 @@ st.markdown("""
         font-weight: 600;
     }
 
-    /* 5. FIX FOR CODE BLOCKS: Give them a dark background and accent text color */
-    pre {
-        background-color: #2a2a2a !important;
-        border: 1px solid #3d3d3d;
+    /* 5. FIX FOR CODE BLOCKS (SKILLS): White background with black text */
+    pre, [data-testid="stCodeBlock"] {
+        background-color: #FFFFFF !important;
+        border: 1px solid #CCCCCC !important;
+        border-radius: 8px !important;
     }
-    code {
-        color: #4DA8DA !important;
+    code, [data-testid="stCodeBlock"] code {
+        color: #000000 !important;
         background-color: transparent !important;
+        font-weight: 600;
+        font-size: 1rem;
     }
     [data-testid="stCodeBlock"] span {
-        color: #4DA8DA !important;
+        color: #000000 !important;
     }
 
     /* 6. Style the Project Cards (Expanders) to match the dark theme */
