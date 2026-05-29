@@ -203,7 +203,7 @@ with tab2:
         st.caption("Final Year Project (FYP) | Current")
         with st.expander("Click to view Project Details", expanded=True):
             st.markdown("""
-            * Developed a secure digital engagement platform ([View Live Backend](https://civitas-backend.vercel.app/)) using **React.js, Node.js, and Supabase** for cloud-based data management.
+            * Developed a secure digital engagement platform ([View Live Project](https://civitas-backend.vercel.app/)) using **React.js, Node.js, and Supabase** for cloud-based data management.
             * Integrated Row Level Security (RLS) and secure authentication protocols to protect user financial transactions.
             * Showcased at the International Student Convention & Expo and reviewed by HEC during official institutional visits.
             """)
