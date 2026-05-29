@@ -146,7 +146,7 @@ st.sidebar.header("Contact Information")
 st.sidebar.markdown("""
 - 📍 **Location:** Islamabad, Pakistan
 - 📱 **Phone:** +92 318 4669484
-- ✉️ **Email:** sumbalmurtazal@gmail.com
+- ✉️ **Email:** sumbalmurtaza1@gmail.com
 """)
 
 st.sidebar.write("") 
