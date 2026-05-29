@@ -42,22 +42,18 @@ st.markdown("""
         color: #FFFFFF !important; /* Text turns white */
     }
 
-    /* 5. CODE BLOCKS (SKILLS): Dark background, White text, Prominent White border */
-    div[data-testid="stCodeBlock"] {
-        background-color: #1e1e1e !important;
-        border: 2px solid #ffffff !important;
-        border-radius: 8px !important;
-    }
-    div[data-testid="stCodeBlock"] pre,
-    div[data-testid="stCodeBlock"] code {
-        background-color: transparent !important;
-        color: #ffffff !important;
-        font-weight: 600 !important;
-        font-size: 1rem !important;
-        text-shadow: none !important;
-    }
-    div[data-testid="stCodeBlock"] span {
-        color: #ffffff !important;
+    /* 5. CUSTOM SKILL BOXES: Guaranteed Dark bg, White text, White border */
+    .skill-box {
+        background-color: #1e1e1e;
+        border: 2px solid #ffffff;
+        border-radius: 8px;
+        padding: 15px;
+        color: #ffffff;
+        font-family: monospace;
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     }
 
     /* 6. Style the Project Cards (Expanders) to match the dark theme */
@@ -241,17 +237,17 @@ with tab3:
     col1, col2 = st.columns(2)
     with col1:
         st.markdown("#### 🔒 Privacy & AI")
-        st.code("Sequre Library | Codon Framework | SMPC | SimpleRNN", language="text")
+        st.markdown('<div class="skill-box">Sequre Library | Codon Framework | SMPC | SimpleRNN</div>', unsafe_allow_html=True)
         
         st.markdown("#### 🛡️ Cybersecurity")
-        st.code("Kali Linux | Metasploit | Packet Sniffing | DDoS | GRC", language="text")
+        st.markdown('<div class="skill-box">Kali Linux | Metasploit | Packet Sniffing | DDoS | GRC</div>', unsafe_allow_html=True)
 
     with col2:
         st.markdown("#### 💻 Development")
-        st.code("React.js | Node.js | Supabase | SQL | JavaScript | Solidity", language="text")
+        st.markdown('<div class="skill-box">React.js | Node.js | Supabase | SQL | JavaScript | Solidity</div>', unsafe_allow_html=True)
         
         st.markdown("#### 📈 Finance & Data")
-        st.code("Financial Modeling | EViews | Power BI | Data Mining", language="text")
+        st.markdown('<div class="skill-box">Financial Modeling | EViews | Power BI | Data Mining</div>', unsafe_allow_html=True)
 
 with tab4:
     st.header("Education & Honors")
