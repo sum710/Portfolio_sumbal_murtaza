@@ -21,7 +21,26 @@ st.markdown("""
         color: #f0f0f0 !important;
     }
 
-    /* 4. Style the Project Cards (Expanders) to match the dark theme */
+    /* 4. FIX FOR BUTTONS: Ensure text inside buttons is dark so it's readable on light backgrounds */
+    [data-testid="stLinkButton"] p {
+        color: #1e1e1e !important;
+        font-weight: 600;
+    }
+
+    /* 5. FIX FOR CODE BLOCKS: Give them a dark background and accent text color */
+    pre {
+        background-color: #2a2a2a !important;
+        border: 1px solid #3d3d3d;
+    }
+    code {
+        color: #4DA8DA !important;
+        background-color: transparent !important;
+    }
+    [data-testid="stCodeBlock"] span {
+        color: #4DA8DA !important;
+    }
+
+    /* 6. Style the Project Cards (Expanders) to match the dark theme */
     [data-testid="stExpander"] {
         background-color: #2a2a2a;
         border: 1px solid #3d3d3d;
@@ -33,7 +52,7 @@ st.markdown("""
         font-size: 1.1rem;
     }
 
-    /* 5. Custom gradient text for your name */
+    /* 7. Custom gradient text for your name */
     .main-header {
         font-size: 3.2rem;
         font-weight: 800;
@@ -44,7 +63,7 @@ st.markdown("""
         padding-bottom: 0px;
     }
     
-    /* 6. Sleek subtitle */
+    /* 8. Sleek subtitle */
     .sub-header {
         font-size: 1.4rem;
         font-weight: 500;
@@ -53,7 +72,7 @@ st.markdown("""
         margin-bottom: 25px;
     }
     
-    /* 7. Info box for the summary */
+    /* 9. Info box for the summary */
     .info-box {
         background-color: #2a2a2a;
         padding: 25px;
@@ -66,7 +85,7 @@ st.markdown("""
         margin-bottom: 30px;
     }
     
-    /* 8. Style for markdown links */
+    /* 10. Style for markdown links */
     a {
         color: #4DA8DA !important;
         text-decoration: none;
@@ -77,7 +96,7 @@ st.markdown("""
         text-decoration: underline;
     }
 
-    /* 9. Style the top navigation tabs */
+    /* 11. Style the top navigation tabs */
     .stTabs [data-baseweb="tab"] {
         color: #A0AEC0 !important;
     }
@@ -106,7 +125,7 @@ st.sidebar.markdown("""
 - ✉️ **Email:** sumbalmurtazal@gmail.com
 """)
 
-st.sidebar.write("") # Adds a little spacing
+st.sidebar.write("") 
 
 # Clean Social Links (One button each)
 st.sidebar.link_button("🌐 Visit My LinkedIn", "https://www.linkedin.com/in/sumbal-murtaza-42907724a/", use_container_width=True)
