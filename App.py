@@ -77,23 +77,25 @@ st.markdown("""
         font-size: 1.1rem;
     }
 
-    /* 7. PERFECTED MAIN HEADING TYPOGRAPHY */
+    /* 7. CLEAN STREAMLIT HEADER TYPOGRAPHY */
     .main-header {
-        font-size: 4.5rem; /* Much larger and more prominent */
-        font-weight: 900; /* Maximum boldness */
-        letter-spacing: -1.5px; /* Tight, professional letter spacing */
-        line-height: 1.1; /* Keeps the text compact */
+        font-family: "Source Sans Pro", sans-serif; /* Matches standard Streamlit font */
+        font-size: 3.5rem; 
+        font-weight: 700; /* Standard bold to match native headers */
+        letter-spacing: normal; /* Removed the tight letter spacing */
+        line-height: 1.2;
         background: -webkit-linear-gradient(45deg, #4DA8DA, #FFFFFF);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        margin-bottom: 5px;
+        margin-bottom: 10px;
         padding-bottom: 0px;
     }
     
-    /* 8. Sleek subtitle */
+    /* 8. Sleek subtitle matching the Streamlit font */
     .sub-header {
-        font-size: 1.6rem; /* Slightly larger to match the new heading */
-        font-weight: 500;
+        font-family: "Source Sans Pro", sans-serif; /* Matches standard Streamlit font */
+        font-size: 1.5rem;
+        font-weight: 600;
         color: #A0AEC0 !important;
         margin-top: 0px;
         margin-bottom: 30px;
@@ -277,3 +279,4 @@ with tab4:
 
 # --- FOOTER ---
 st.markdown("---")
+st.markdown("<div style='text-align: center; color: #A0AEC0;'>Built with Streamlit • Let's build secure, intelligent systems together.</div>", unsafe_allow_html=True)
