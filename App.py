@@ -3,43 +3,55 @@ import streamlit as st
 # --- PAGE CONFIGURATION ---
 st.set_page_config(page_title="Sumbal Murtaza | Portfolio", page_icon="🛡️", layout="wide")
 
-# --- CUSTOM CSS ---
+# --- CUSTOM CSS FOR A PREMIUM PROFESSIONAL THEME ---
 st.markdown("""
 <style>
+    /* Gradient text for the main name */
     .main-header {
-        font-size: 2.5rem;
-        font-weight: 700;
-        color: #4A90E2;
+        font-size: 3.2rem;
+        font-weight: 800;
+        background: -webkit-linear-gradient(45deg, #2b5876, #4e4376);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
     }
+    
+    /* Sleek subtitle */
     .sub-header {
-        font-size: 1.2rem;
-        color: #A0AEC0;
-        margin-bottom: 20px;
+        font-size: 1.4rem;
+        font-weight: 500;
+        color: #555555;
+        margin-top: 5px;
+        margin-bottom: 25px;
     }
-    .highlight {
-        color: #4CAF50;
-        font-weight: bold;
+    
+    /* Custom info box for the summary */
+    .info-box {
+        background-color: #f8f9fa;
+        padding: 25px;
+        border-radius: 8px;
+        border-left: 5px solid #2b5876;
+        color: #333333;
+        font-size: 1.1rem;
+        line-height: 1.7;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        margin-bottom: 30px;
     }
 </style>
 """, unsafe_allow_html=True)
 
-# --- HERO SECTION ---
-col1, col2 = st.columns([2.5, 1])
-
-with col1:
-    st.markdown('<p class="main-header">Sumbal Murtaza</p>', unsafe_allow_html=True)
-    st.markdown('<p class="sub-header">FinTech Senior & AI Pioneers Program Intern</p>', unsafe_allow_html=True)
-    st.info("""
-    **Specialized in Privacy-Preserving Machine Learning (PPML), Cybersecurity, and Full-Stack Development.**  
-    Expert in implementing secure AI models using the Sequre library on Codon frameworks.  
-    Proven track record in developing GRC-compliant FinTech platforms (Civitas) and performing advanced penetration testing.
-    """)
-
-with col2:
-    st.image("https://images.unsplash.com/photo-1573164713988-8665fc963095?w=400&q=80", use_column_width=True)
+# --- HERO SECTION (NO IMAGES, FULL WIDTH) ---
+st.markdown('<p class="main-header">Sumbal Murtaza</p>', unsafe_allow_html=True)
+st.markdown('<p class="sub-header">FinTech Senior & AI Pioneers Program Intern</p>', unsafe_allow_html=True)
+st.markdown("""
+<div class="info-box">
+    <b>Specialized in Privacy-Preserving Machine Learning (PPML), Cybersecurity, and Full-Stack Development.</b><br><br>
+    Expert in implementing secure AI models using the Sequre library on Codon frameworks. Proven track record in developing GRC-compliant FinTech platforms (Civitas) and performing advanced penetration testing.
+</div>
+""", unsafe_allow_html=True)
 
 # --- SIDEBAR ---
-st.sidebar.image("https://cdn-icons-png.flaticon.com/512/2942/2942813.png", width=100) 
 st.sidebar.header("Contact Information")
 st.sidebar.markdown("""
 - 📍 **Location:** Islamabad, Pakistan
@@ -47,9 +59,11 @@ st.sidebar.markdown("""
 - ✉️ **Email:** sumbalmurtazal@gmail.com
 """)
 
-# Clean LinkedIn Link Integration
-st.sidebar.markdown("- 🔗 **LinkedIn:** [Connect on LinkedIn](https://www.linkedin.com/in/sumbal-murtaza-42907724a/)")
-st.sidebar.link_button("🌐 Visit My LinkedIn Profile", "https://www.linkedin.com/in/sumbal-murtaza-42907724a/")
+st.sidebar.write("") # Adds a little spacing
+
+# Clean Social Links (One button each)
+st.sidebar.link_button("🌐 Visit My LinkedIn", "https://www.linkedin.com/in/sumbal-murtaza-42907724a/", use_container_width=True)
+st.sidebar.link_button("💻 Visit My GitHub", "https://github.com/sum710", use_container_width=True)
 
 st.sidebar.divider()
 st.sidebar.header("Core Competencies")
@@ -64,18 +78,17 @@ tab1, tab2, tab3, tab4 = st.tabs(["🚀 Experience", "💻 Technical Projects", 
 with tab1:
     st.header("Professional Experience & Research")
     
-    # CTA Quote for research connecting to your professional profile
-    st.markdown("> *\"Let's connect to discuss privacy-preserving AI and secure software solutions.\"* — [Connect on LinkedIn](https://www.linkedin.com/in/sumbal-murtaza-42907724a/)")
+    st.markdown("> *\"Let's connect to discuss privacy-preserving AI and secure software solutions.\"*")
     st.write("")
 
     with st.container():
         st.subheader("AI Pioneers Program Intern")
         st.markdown("**Remote | Oct 2025 - Apr 2026** — *Project Mentored by Yale University Researcher*")
         st.markdown("""
-        *   **Official Contributor (Sequre):** Successfully integrated privacy-preserving Deep Learning modules into the official Sequre repository managed by Smjhlovic Haris.
-        *   **Privacy-Preserving Sepsis Prediction:** Developed a Deep Learning model for early sepsis detection utilizing the Sequre library on the Codon framework.
-        *   **Secure Multi-Party Computation (SMPC):** Implemented protocols to process sensitive medical datasets while maintaining patient confidentiality.
-        *   **Optimization:** Optimized SimpleRNN architecture for time-series medical data, focusing on high-speed execution through Codon's ahead-of-time (AOT) compilation.
+        * **Official Contributor (Sequre):** Successfully integrated privacy-preserving Deep Learning modules into the official Sequre repository managed by Smjhlovic Haris.
+        * **Privacy-Preserving Sepsis Prediction:** Developed a Deep Learning model for early sepsis detection utilizing the Sequre library on the Codon framework.
+        * **Secure Multi-Party Computation (SMPC):** Implemented protocols to process sensitive medical datasets while maintaining patient confidentiality.
+        * **Optimization:** Optimized SimpleRNN architecture for time-series medical data, focusing on high-speed execution through Codon's ahead-of-time (AOT) compilation.
         """)
     
     st.divider()
@@ -84,8 +97,8 @@ with tab1:
         st.subheader("Chief Officer Audit & Finance Affairs")
         st.markdown("**National Youth Leadership Program | Aug - Sep 2025**")
         st.markdown("""
-        *   Automated financial auditing for national-scale initiatives using Python; improved data transparency and audit trails.
-        *   Designed documentation frameworks that reduced manual reconciliation errors and enhanced reporting standards.
+        * Automated financial auditing for national-scale initiatives using Python; improved data transparency and audit trails.
+        * Designed documentation frameworks that reduced manual reconciliation errors and enhanced reporting standards.
         """)
 
 with tab2:
@@ -100,9 +113,9 @@ with tab2:
         st.caption("Final Year Project (FYP) | Current")
         with st.expander("View Project Details", expanded=True):
             st.markdown("""
-            *   Developed a secure digital engagement platform using **React.js, Node.js, and Supabase** for cloud-based data management.
-            *   Integrated Row Level Security (RLS) and secure authentication protocols to protect user financial transactions.
-            *   Showcased at the International Student Convention & Expo and reviewed by HEC during official institutional visits.
+            * Developed a secure digital engagement platform using **React.js, Node.js, and Supabase** for cloud-based data management.
+            * Integrated Row Level Security (RLS) and secure authentication protocols to protect user financial transactions.
+            * Showcased at the International Student Convention & Expo and reviewed by HEC during official institutional visits.
             """)
     
     st.divider()
@@ -116,9 +129,9 @@ with tab2:
         st.caption("Vulnerability Assessment | 2025")
         with st.expander("View Project Details"):
             st.markdown("""
-            *   Performed network audits via **Kali Linux**, specializing in Packet Sniffing and DDoS Attack Simulation.
-            *   Utilized **Metasploit** for exploit research and configured secure Ubuntu environments to mitigate server-side risks.
-            *   Conducted vulnerability scanning to identify and patch SQL injection and Cross-Site Scripting (XSS) threats.
+            * Performed network audits via **Kali Linux**, specializing in Packet Sniffing and DDoS Attack Simulation.
+            * Utilized **Metasploit** for exploit research and configured secure Ubuntu environments to mitigate server-side risks.
+            * Conducted vulnerability scanning to identify and patch SQL injection and Cross-Site Scripting (XSS) threats.
             """)
             
     st.divider()
@@ -132,8 +145,8 @@ with tab2:
         st.caption("Risk Modeling & Analytics | 2025")
         with st.expander("View Project Details"):
             st.markdown("""
-            *   **Credit Risk Optimization:** Built a Logistic Regression model to assess default probabilities.
-            *   **Forecasting Dashboard:** Developed an interactive Streamlit app for stock price forecasting using Scikit-learn and Pandas.
+            * **Credit Risk Optimization:** Built a Logistic Regression model to assess default probabilities.
+            * **Forecasting Dashboard:** Developed an interactive Streamlit app for stock price forecasting using Scikit-learn and Pandas.
             """)
 
 with tab3:
@@ -163,11 +176,10 @@ with tab4:
     
     st.markdown("### Achievements")
     st.markdown("""
-    *   🏅 **Academic Excellence:** Gold Medalist (Semesters 2, 3, 4); Bronze Medalist (Semester 5).
-    *   🎓 **Scholarship:** Recipient of PEEF Merit-Based Scholarship.
-    *   🏆 **Award:** 1st Position in Punjab Govt Essay Writing Competition.
+    * 🏅 **Academic Excellence:** Gold Medalist (Semesters 2, 3, 4); Bronze Medalist (Semester 5).
+    * 🎓 **Scholarship:** Recipient of PEEF Merit-Based Scholarship.
+    * 🏆 **Award:** 1st Position in Punjab Govt Essay Writing Competition.
     """)
 
 # --- FOOTER ---
 st.markdown("---")
-
